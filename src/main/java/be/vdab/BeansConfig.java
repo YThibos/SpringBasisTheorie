@@ -9,9 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-import be.vdab.restclients.ECBKoersenClient;
 import be.vdab.restclients.KoersenClient;
-import be.vdab.restclients.YahooKoersenClient;
 import be.vdab.services.EuroService;
 
 //@Configuration

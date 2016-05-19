@@ -11,13 +11,13 @@ import org.springframework.stereotype.Component;
 
 //@Component
 //@Qualifier("Yahoo")
-public class YahooKoersenClient implements KoersenClient {
+class YahooKoersenClient implements KoersenClient {
 	
 	private final URL url;
 
 	//@Autowired
 	//@Value("${yahooKoersenURL}") bij param
-	public YahooKoersenClient(URL url) {	
+	YahooKoersenClient(URL url) {	
 		this.url = url;
 	}
 

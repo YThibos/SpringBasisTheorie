@@ -11,13 +11,13 @@ import org.springframework.stereotype.Component;
 
 //@Component
 //@Qualifier("ECB")
-public class ECBKoersenClient implements KoersenClient {
+class ECBKoersenClient implements KoersenClient {
 	
 	private final URL url;
 
 	//@Autowired
 	//@Value("${ecbKoersenURL}") bij param
-	public ECBKoersenClient(URL url) {
+	ECBKoersenClient(URL url) {
 		this.url = url;
 	}
 
