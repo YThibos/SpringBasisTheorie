@@ -4,6 +4,13 @@
 	xsi:schemaLocation='http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd'>
 
+
+	<!-- IMPORTS -->
+	<import resource="restclients.xml"/>
+	<import resource="services.xml"/>
+
+
+	<!-- STUFF -->
 	<bean id="classA" class="be.vdab.ClassA">
 		<property name="telefoonNrHelpdesk" value="03/123.45.67" />
 		<property name='koersenURL'
@@ -12,7 +19,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd'>
 		<property name='importData' value='c:/workspace/data/postcodes.txt' />
 		<property name="defaultBladRichting" value="LIGGEND"></property>
 		<property name='webMasterEmailAdres' value='SpringIntVeld@vdab.be' />
-		<property name='websiteGestart' value='2008-07-31'/>
+		<property name='websiteGestart' value='2008-07-31' />
 	</bean>
 
 	<bean id="classB" class="be.vdab.ClassB">
@@ -31,6 +38,8 @@ http://www.springframework.org/schema/beans/spring-beans.xsd'>
 		</constructor-arg>
 	</bean>
 
+
+	<!-- CONVERTER BEAN -->
 	<bean id='conversionService'
 		class='org.springframework.context.support.ConversionServiceFactoryBean'>
 		<property name='converters'>
@@ -39,5 +48,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd'>
 			</list>
 		</property>
 	</bean>
+
 
 </beans>

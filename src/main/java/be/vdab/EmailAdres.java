@@ -7,7 +7,7 @@ public class EmailAdres {
 	private final static Pattern REG_EXPR = Pattern.compile("^.+@.+\\.[a-z]+$");
 	private final String adres;
 
-	public EmailAdres(String adres) {
+	public EmailAdres(String adres) throws IllegalArgumentException {
 		if (!REG_EXPR.matcher(adres).matches()) {
 			throw new IllegalArgumentException("Verkeerd emailadres:" + adres);
 		}
