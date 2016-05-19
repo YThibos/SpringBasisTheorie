@@ -4,11 +4,19 @@ import java.math.BigDecimal;
 import java.net.URL;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Qualifier("ECB")
+@Component
 public class ECBKoersenClient implements KoersenClient {
 	
 	private final URL url;
 
-	public ECBKoersenClient(URL url) {
+	@Autowired
+	public ECBKoersenClient(@Value("${ecbKoersenURL}") URL url) {
 		this.url = url;
 	}
 

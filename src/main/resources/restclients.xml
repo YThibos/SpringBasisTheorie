@@ -8,12 +8,6 @@
 	
 	<context:property-placeholder location='classpath:restclients.properties' />
 
-	<bean id='yahooKoersenClient' class='be.vdab.restclients.YahooKoersenClient'>
-		<constructor-arg value='${yahooKoersenURL}' />
-	</bean>
-
-	<bean id='ecbKoersenClient' class='be.vdab.restclients.ECBKoersenClient'>
-		<constructor-arg value='${ecbKoersenURL}' />
-	</bean>
+	<context:component-scan base-package="be.vdab.restclients" />
 	
 </beans>
