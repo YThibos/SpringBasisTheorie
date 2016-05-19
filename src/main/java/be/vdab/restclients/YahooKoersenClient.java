@@ -9,14 +9,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Qualifier("Yahoo")
-@Component
+//@Component
+//@Qualifier("Yahoo")
 public class YahooKoersenClient implements KoersenClient {
 	
 	private final URL url;
 
-	@Autowired
-	public YahooKoersenClient(@Value("${yahooKoersenURL}")URL url) {	
+	//@Autowired
+	//@Value("${yahooKoersenURL}") bij param
+	public YahooKoersenClient(URL url) {	
 		this.url = url;
 	}
 

@@ -9,14 +9,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Qualifier("ECB")
-@Component
+//@Component
+//@Qualifier("ECB")
 public class ECBKoersenClient implements KoersenClient {
 	
 	private final URL url;
 
-	@Autowired
-	public ECBKoersenClient(@Value("${ecbKoersenURL}") URL url) {
+	//@Autowired
+	//@Value("${ecbKoersenURL}") bij param
+	public ECBKoersenClient(URL url) {
 		this.url = url;
 	}
 

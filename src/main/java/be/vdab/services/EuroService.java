@@ -15,6 +15,7 @@ public class EuroService {
 	private final KoersenClient koersenClient;
 	
 	@Autowired
+	 
 	public EuroService(@Qualifier("ECB") KoersenClient koersenClient) {
 		this.koersenClient = koersenClient;
 	}
